@@ -14,26 +14,26 @@ class Solution:
 
 
 # class Solution(object):
-#     def isValid(self, s):
-#         """
-#         :type s: str
-#         :rtype: bool
-#         """
-#         if len(s) % 2 != 0:
-#             return False
-#         lb = {'(': ')', '[': ']', '{': '}'}
-#         stack = []
-#
-#         for x in s:
-#             if x in lb:
-#                 stack.append(x)
-#             else:
-#                 if len(stack) == 0:
-#                     return False
-#                 top = stack.pop()
-#                 if lb[top] != x:
-#                     return False
-#         return len(stack) == 0
+# #     def isValid(self, s):
+# #         """
+# #         :type s: str
+# #         :rtype: bool
+# #         """
+# #         if len(s) % 2 != 0:
+# #             return False
+# #         lb = {'(': ')', '[': ']', '{': '}'}
+# #         stack = []
+# #
+# #         for x in s:
+# #             if x in lb:
+# #                 stack.append(x)
+# #             else:
+# #                 if len(stack) == 0:
+# #                     return False
+# #                 top = stack.pop()
+# #                 if lb[top] != x:
+# #                     return False
+# #         return len(stack) == 0
 
 
 
