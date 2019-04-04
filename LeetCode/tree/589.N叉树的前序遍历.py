@@ -20,7 +20,7 @@ class Solution:
 
             return self.res
 
-
+#
 # class Solution(object):
 #     def preorder(self, root):
 #
