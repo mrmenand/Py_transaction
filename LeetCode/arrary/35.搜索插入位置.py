@@ -1,0 +1,10 @@
+# 35. 搜索插入位置
+class Solution:
+    def searchInsert(self, nums,target):
+            # nums: List[int], target: int) -> int:
+         for i in range(len(nums)):
+            if nums[i] >= target:
+                return i
+
+         return i+1
+
