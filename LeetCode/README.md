@@ -91,6 +91,22 @@ s指向上一轮的报数情况，遍历len(s),`j < len(s)-1 and s[j] == s[j+1]`
 * 541 反转字符串
 前k个反转，后k个不反转，以2k为间隔`for i in range(0,len(s),2*k),res+=s[i:i+k][::-1]+s[i+k:i+2*k]`
 
+4.28
+* 415 字符串相加
+用eval（）函数执行一个字符串表达式`str(eval(num1+"+"+num2))`
+
+* 925 长键按入
+用时最短的代码简直骚断了腿，只有相等时，i才加`if name[i]==typed[j]:i+=1`，每次遍历都j+=1，最后判断是`i==len(name)`
+
+* 459 重复的子字符串
+可以在（1，len(s)//2+1）遍历，`if s[i] == s[0] and s[:i] * (len(s)//i) == s` 判断重复的开始的位置以及复制相应倍数
+
+* 125 验证回文串
+用过滤函数filter,返回的是一个可迭代对象，function函数为用的是str.isalnum???为什么没有括号`s = "".join(filter(str.isalnum, s)).lower()`，然后切片判断s == s[::-1]
+
+* 28 实现strStr()
+`haystack.find(needle)` 可以在字符串里面查找字符串的位置，没有则返回-1，或者用`haystack.split(needle)[0]`分割，并选取[0]
+
 
 
 
