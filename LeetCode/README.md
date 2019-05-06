@@ -159,6 +159,28 @@ a + b == b + a 保证长度一样，是结点（物理地址）一样而不是�
 * 811 子域名的访问计数
 先分割，再对域名分割，依次从后往前遍历，`dic[tmp] = dic.get(tmp,0) + int(num)` ,  遍历字典用`dic.item()`
 
+5.6
+昨天生日，恰烧烤去了
+又见罪恶
+
+* 136 只出现一次的数字 
+**Def : 0 ^ N = N，N ^ N = 0** 异或操作相异为1，交换律，最后返回结果
+
+* 463 岛屿的周长
+遇见判断边界的条件，在外面加一圈0,问题转化为当grid[i][j] ==1 时，判断邻近四个点是否有1，` edge += (4 - grid[i + 1][j] - grid[i - 1][j] - grid[i][j + 1] - grid[i][j - 1])`
+
+* 575 分糖果
+马冬梅会遇见三中情况`min(len(set(candies)),len(candies)//2)`
+
+* 389 找不同
+找一个的不同，可以利用0和数字异或为数字，` for i in s+t : res = res ^ ord(i)` ,还有一种就是减法chr(sum([ord(i) for i in t] )- sum([ord(j) for j in s])))
+
+* 447 回旋镖的数量
+计算其他点到当前点的距离，如果相同距离的点有2个以上则满足$ A_n ^2$
+
+* 953 验证外星语词典
+`words == sorted(words, key = lambda x: [order.index(i)  for i in x])`利用lambda函数
+
 
 
 
