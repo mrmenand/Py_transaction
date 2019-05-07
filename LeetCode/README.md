@@ -32,6 +32,7 @@
 ## Acknowledgments
 
 - [LeetCode 中国](https://leetcode-cn.com/)
+- [Shortest-LeetCode-Python-Solutions](https://github.com/cy69855522/Shortest-LeetCode-Python-Solutions)
 
 ## 日彔
 4.23 刷题后开始写笔记 
@@ -180,6 +181,25 @@ a + b == b + a 保证长度一样，是结点（物理地址）一样而不是�
 
 * 953 验证外星语词典
 `words == sorted(words, key = lambda x: [order.index(i)  for i in x])`利用lambda函数
+
+5.7
+时间太快，但是我也一直在
+
+* 748 提交的代码
+两种过滤的方式，一种用列表推导式：`newPlate = [ i.lower() for i in licensePlate if i.isalpha()]`,第二种用过滤器`newPlate = filter(str.isalpha,str(licensePlate.lower()))`,对words的长度进行排序，遍历word的每一个字符，与newplate比较，最后判断长度
+
+* 609 员工的重要性
+BFS: `hashmap[employee.id] = [employee.importance, employee.subordinates]` 建立哈希表，然后栈来遍历，res += hashmap[emp][0]     DFS `self.res += hashmap[sub][0] , dfs(hashmap[sub][1])`
+
+* 409 最长回文串
+建立哈希表，遍历表键值，对%2判断，是则加上，不是`cnt + = v-1  `并且把one = 1，最后返回结果cnt + one
+
+* 599 两个列表的最小索引总和
+利用set集合寻找共同`common = set(list1) & set(list2)`，因为是无序，用哈希表存取索引值的，找到最小的索引值，最后返回键值与最小的key列表`[i for i in hashmap if hashmap[i] == minidx]`
+
+* 205 同构字符串
+利用两个哈希表建立s，t 储存索引，判断s和t中每个字母最后出现的位置是否相同，不相同则不同构，顺序很关键`  if hash_s[s[i]] != hash_t[t[i]]: return False \n hash_s[s[i]] = i \n hash_t[t[i]] = i`
+
 
 
 
