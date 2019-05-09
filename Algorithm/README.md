@@ -1,5 +1,8 @@
 ## 数据结构与算法
-   
+![数据结构与算法](img/datastructure.png)
+## Acknowledgments
+-   [数据结构与算法之美](https://github.com/wangzheng0822/algo)
+-   [Python数据结构与算法(视频)](https://www.bilibili.com/video/av46256220?from=search&seid=13296026210487895017)
 ## 线性表
 n个同类型数据元素的有限序列 ,记为：L= ($a_1,a_2,...a_i,...a_n $)，记录着元素之间的一种顺序关系。根据线性表的实际存储方式，可分为 **顺序表**和**链表**。
 ### 顺序表

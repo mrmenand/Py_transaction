@@ -222,6 +222,14 @@ BFS: `hashmap[employee.id] = [employee.importance, employee.subordinates]` 建�
 用的是厄拉多塞筛法.：先将 2－N 的各数放入表中，然后在 2 的上面画一个圆圈，然后划去 2 的其他倍数；第一个既未画圈又没有被划去的数是 3，将它画圈，再划去 3 的其他倍数；现在既未画圈又没有被划去的第一个数是 5，将它画圈，并划去5的其他倍数……依次类推，一直到所有小于或等于N的各数都画了圈或划去为止
 `for i in range(2,int(n**0.5)+1):if prime[i]: prime[i * i:n:i] = [0] * len(prime[i * i:n:i])`
 
+5.9 
+Python刷题的时候，一道题可能属于多种类型
+因为缺乏做题笔记和归类
+血与泪的教训，嘤嘤嘤~~~
+Maths
+
+
+
 
 
 
