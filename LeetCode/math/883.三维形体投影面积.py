@@ -1,14 +1,13 @@
 # 883. 三维形体投影面积
 class Solution:
     def projectionArea(self, grid: List[List[int]]) -> int:
-        x, y, z = 0, 0, 0
-        n = len(grid)
+        xy, xz, yz = 0, 0, 0
         for i in grid:
-            x += n - i.count(0)
-            z += max(i)
+            xz += max(i)
+            xy += len(grid) - i.count(0)
 
-        for i in zip(grid):
-            y += max(i)
+        for i in zip(*grid):
+            yz += max(i)
 
-        return x + y + z
-
+        print()
+        return xz + yz + xy
