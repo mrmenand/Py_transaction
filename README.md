@@ -4,10 +4,11 @@
 >人生苦短，何不用Py交易一波
 
 本库主要是从小白学习Python的记录
-* CCF-CSP 
-* DesignPattern 
-* LeetCode 
-* Notebook 
+* [Algorithm](./Algorithm)
+* [CCF_CSP](./CCF_CSP) 
+* [DesignPattern](./DesignPattern) 
+* [LeetCode](./LeetCode)
+* [Notebook](./Notebook) 
 
 
 
