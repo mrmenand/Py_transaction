@@ -6,7 +6,6 @@
 本库主要是从小白学习Python的记录
 * [Algorithm](./Algorithm)
 * [CCF_CSP](./CCF_CSP) 
-* [DesignPattern](./DesignPattern) 
 * [LeetCode](./LeetCode)
 * [Notebook](./Notebook) 
 
