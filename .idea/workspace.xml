@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd236af0-b6bc-4045-91af-a39425e06fd3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Algorithm/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/binary_search.py" beforeDir="false" afterPath="$PROJECT_DIR$/Algorithm/binary_search.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/bubble_sort.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/insert_sort.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/merge_sort.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/quick_sort.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/select_sort.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Algorithm/shell_sort.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,15 +17,15 @@
     <session id="475800490">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.13" value="2" />
           <entry key="project.open.time.15" value="3" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.19" value="1" />
           <entry key="project.open.time.31" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -69,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Algorithm/binary_search.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1230">
-              <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="30">
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -250,7 +242,7 @@
     <frame x="-1374" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14372164" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14599092" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -459,13 +451,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/insert_sort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" lean-forward="true" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/insert_sort.py" />
     <entry file="file://$PROJECT_DIR$/LeetCode/string/521.最长特殊序列 Ⅰ.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -478,51 +464,21 @@
     <entry file="file://$PROJECT_DIR$/LeetCode/string/680. 验证回文字符串Ⅱ.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/merge_sort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/merge_sort.py" />
     <entry file="file://$PROJECT_DIR$/Algorithm/sorts.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2094">
           <caret line="9" column="43" lean-forward="true" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding>
-            <marker date="1557973594818" expanded="true" signature="36:37" ph="..." />
-            <marker date="1557973594818" expanded="true" signature="36:42" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/bubble_sort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/select_sort.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/bubble_sort.py" />
+    <entry file="file://$PROJECT_DIR$/Algorithm/select_sort.py" />
     <entry file="file://$PROJECT_DIR$/Algorithm/single_cycle_link_list.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/quick_sort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="21" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Algorithm/shell_sort.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithm/quick_sort.py" />
+    <entry file="file://$PROJECT_DIR$/Algorithm/shell_sort.py" />
     <entry file="file://$PROJECT_DIR$/Algorithm/single_link_list.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -541,8 +497,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithm/binary_search.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1230">
-          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="30">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
