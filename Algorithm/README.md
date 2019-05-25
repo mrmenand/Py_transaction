@@ -239,4 +239,29 @@ Python用字典实现散列表
  - TopK 
  - 优先队列 
  - 求中位数 
- 
+
+ ### 图(Graph) 
+存储方式
+ - 邻接矩阵 
+ - 邻接表（可把链表换成平衡二叉查找树、跳表、散列表等） 
+
+搜索方式（时间O(E)，空间O(V)）
+ - 广度优先搜索（Breadth-First-Search）,层级递进，先找距离顶点最近的 
+ -  深度优先搜索（Depth-First-Search）,回溯思想
+
+### 字符串匹配 
+- Brute Force,朴素匹配算法,O(n*m)，符合KISS(Keep it Simple and Stupid) 
+- RK，哈希思想，理想 O(n) 
+- BM，坏字符规则（bad character rule)、好后缀规则（good suffix shift），计算好后缀和坏字符往后滑动的位数，然后取两个数中最大的，作为模式串往后滑动的位数  
+- KMP，好前缀规则 
+- Trie树 ，查找前缀匹配的字符
+串 
+- AC自动机：用多模式串匹配实现敏感词过滤功能 
+
+### 基本算法思想 
+- 贪心算法 Greedy（每一步都是局部最优）
+- 分治算法 Divide and Conquer （分治是思想，递归是编程技巧）划分n个规模较小的子问题（独立）
+- 回溯算法
+- 动态规划Dynamic Programming ，划分n个相同的问题 
+
+### 位图与布隆过滤器 
