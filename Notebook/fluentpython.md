@@ -45,22 +45,12 @@ d.get(k, default)给找不到键一个默认的返回值
 d.setdefault()处理找不到的键,参数(key, value)的可迭代对象或者关键字参数 
 d.update(dict)插入新值或者更新已有键值对 
 - collections.defaultdict
-处理找不到的键 
+处理找不到的键  
 - collections.OrderedDict
 建立有序字典
 - dict和set的背后的散列表,详情看[散列表算法法]()部分
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### 9.  闭包 
+只有涉及嵌套函数时才有闭包问题  
+闭包指延伸了作用域的函数 
+nonlocal变量标记为自由变量
