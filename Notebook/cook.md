@@ -1,3 +1,7 @@
+### Acknowledgement
+[Python高级编程技巧实战](https://coding.imooc.com/class/62.html) 
+
+### 数据结构
 #### 1. 如何在列表，字典，集合中筛选数据？
 - 列表  data = [randint(-10,10) for _ in range(10)]
     - 过滤器：filter(lambda x: x>0, data)
@@ -68,6 +72,7 @@ s1.keys() & s2.keys() & s3.keys()
    pickle.dump(q.open("history","w"))
    pickle.load(open("history")) 
 
+### 迭代器和生成器 
 #### 8. 如何实现可迭代对象和迭代器对象？
 l = [randint(0,10) for _ in range(10) ] 
 s = "abcdefg" 
@@ -195,6 +200,58 @@ for x in t :
     print(x)
 ```
 
+### 字符串处理 
+#### 12. 如何拆分含有多种分割符的字符串？
+- 连续使用str.split()方法，每次处理一种分割符号    
+s为字符串，ts为要分割的字符串
+  ```
+    res = [s]  
+    for type in ts:
+        t = []
+        map(lambda x: t.extend(x.split(type)),res)
+        res = t 
+
+   ```
+- 使用正则表达式的re.split()方法，一次性拆分字符串  
+`re.split(r"[,;\t|]+", s )`
+
+#### 13. 如何判断字符串s是否以字符串a开始或结尾？ 
+使用字符串的str.startswith()和str.endswith()方法，注意：多个匹配时使用元组 
+`[name for name in os.listdir(".") if name.endswith((".sh",".py"))]`
+
+#### 14. 如何调整字符串中文本的格式 
+使用正则表达式re.sub()方法做字符串替换，利用正则表达式的捕获组，捕获每个部分内容，在替换字符中调整各个捕获组的顺序  
+```
+log = open("xx.log").read()
+re.sub(r"(\d{4})-(\d{2})-(\d{2})",r"\2/\3/\1,log) 
+``` 
+
+#### 15. 如何将多个小字符串拼接成一个大的字符串？
+- 迭代列表，连续使用"+"操作依次拼接每一个字符串 
+临时字符串，大量的字符串拷贝和对象的释放，字符串很大就很浪费
+- 使用str.join()方法，更加快速的拼接列表中的所有字符串 
+   生成器表达式比列表推导式更节省内存 
+    ```
+    l = ["abc",23,556,"xyz"]
+    ".join(str(x) for x in l) 
+    ```
+
+#### 16. 如何对字符串进行左，右，居中对齐？
+- 使用字符串的str.ljust(),str.rjust(),str.center() 进行左右居中对齐 
+- 使用format()方法，传递类似"<20"，">20","^"参数完成同样任务  
+```
+w = max(map(len,d.keys()))
+for k in d :
+       print(k.ljust(w),":",d[k])
+```
+
+#### 17.  如何去掉字符串中不需要的字符 
+- 字符串的strip()，lstrip(), rstrip() 方法去掉字符串两端字符 
+- 删除单个固定位置的字符，可以使用切片＋拼接的方式　
+- 字符串的replace()方法或正则表达式re.sub()删除任意位置字符串 
+  s.replace("\t","")
+  re.sub("[\t\r]","",s)
+- 字符串translate()方法，可以同时删除多种不同的字符串 
 
 
 
