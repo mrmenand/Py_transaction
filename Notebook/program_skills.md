@@ -269,6 +269,8 @@ for k in d :
   re.sub("[\t\r]","",s)
 - 字符串translate()方法，可以同时删除多种不同的字符串 
 
+###  文件的I/O操作  
+
 #### 19.  如何读写文本文件 ？
 字符串的语言发生了变化  
 Python2      Python3 
@@ -316,6 +318,8 @@ Python中文件对象默认缓冲区大小为4096
 采集数据做分析，最终只保存分析结果，用临时文件（慎）  
 - 使用标准库的tempfile下的TemporaryFile，NameTemporaryFile   
 
+### 数据编码与处理  
+
 #### 25. 如何读取csv数据？
 使用标准库的csv模板，可以使用其中的reader和writer完成csv文件读写 
 ```
@@ -331,6 +335,70 @@ Python中文件对象默认缓冲区大小为4096
                 if int(row[5]) >= 50000000:
                     writer.writerow(row)  
  ```
+
+ #### 26.  如何读写json数据 
+ JSON(JavaScript Obeject Notation) 是一种轻量级的数据交换格式 
+ - 使用标准库的json模板，其中load,dump函数可以完成json文件的读取 
+   - load，dump读取的是数据对象 
+   - loads, dumps读取的是文件对象  
+
+####  27.   如何解析简单的xml文件  
+XML 指可扩展标记语言（eXtensible Markup Language）  
+- 使用标准库中的xml.etree.ElementTree,其中的parse函数可以解析xml文档 
+TODO：
+
+#### 28.  如何构建xml文档
+- 使用标准库中的xml.etree.ElementTree，构建ElementTree，使用write方法写入文件  
+TODO：
+
+
+#### 29. 如何读写excel文件 
+- 使用第三方库xlrd和xlwt,这两个库分别用于excel读和写  
+TODO：感觉很鸡肋，应用场景？
+
+###  类与对象 
+
+####  30. 如何派生内置不可变类型并修改实例化行为？ 
+- 定义类IntTuple继承内置tuple, 并实现__new__，修改实例化行为  
+ __new__在__init__之前执行  
+    ```
+        def __new__(cls, iterable):
+            g = (x for x in iterable if isinstance(x, int) and x > 0)
+            return super(IntTuple, cls).__new__(cls,g)
+    ```
+
+####  31. 如何为创建大量实例节省内存？ 
+- 定义类的__slots__属性，它是用来声明实例属性名字的列表，类似C语言的结构体 
+动态绑定属性的特性绑定内存做代价，主要体现在sys.getsizeof（p.__dict__)上 
+
+####  32 如何让对象支持上下文管理 ？ 
+- 实现上下文管理协议，需要定义实例的__enter__，__exit__方法，它们分别在with开始和结束时被调用 
+TODO: 实现自己的
+
+#### 33. 如何创建可管理的对象属性？  
+- 使用property函数为类创建可管理属性 
+- 使用@property装饰器 
+
+#### 34. 如何让类支持比较操作？ 
+- 比较符号运算重载，需要实现以下方法：
+__lt__,__le__,__gt__,__ge__,__eq__,__ne__    
+    ```
+        def __lt__(self, obj):
+            print("in__lt__")
+            return self.area() < obj.area()
+
+        def __le__(self, obj):
+            print("in__le__")
+            return self.area() <= obj.area()  
+    ```
+- 使用标准库下的functools的类装饰器total_ordering可以简化此过程 
+  只需需要定义至少一种方法,就可以推导出 
+
+
+
+
+
+
  
 
 
