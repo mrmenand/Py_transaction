@@ -1,4 +1,7 @@
-## Advanced programming skills 
+ ## Advanced programming skills 
+
+>  2019年6月5日，快要高考了，历尽千帆事，等我学成归来的时候，调整结构，删除没用的，增加应用场景及合适的代码  
+
 
 ### Acknowledgement
 [Python高级编程技巧实战](https://coding.imooc.com/class/62.html) 
@@ -395,7 +398,128 @@ __lt__,__le__,__gt__,__ge__,__eq__,__ne__
   只需需要定义至少一种方法,就可以推导出 
 
 
+#### 35. 如何使用描述符对实例属性做类型检查  
+- 可以对实例变量名指定类型 ，赋予不正确类型时抛出异常 
+- 使用描述符来实现需要类型检查的属性 
+分别实现__get__,__set__,__delete__方法，__set__内使用isinstance函数做类型检查
+  ```
+      def __set__(self, instance, value):
+        if not instance(value,self.type_):
+            raise TypeError("expected an %s "%self.type_)
+        instance.__dict__[self.name] = value
+  ```
 
+#### 36. 如何在环状数据结构中管理内存？   
+在Python中,垃圾回收器通过引用技术来回收垃圾对象的，但某些环状数据结构（树、图···）,存在对象间的循环引用。
+- 使用标准库weakref，它可以创建一种能访问对象但不增加计数的对象 
+TODO
+
+#### 37. 如何通过实例方法名字的字符串调用方法？
+- 使用内置函数getattr，通过名字在实例上获取方法对象，然后调用 
+   ```
+   def getArea(shape):
+         for name in ("area","getArea","get_area"):
+                f = getattr(shape,name,None)
+                if  f:
+                    return f()
+   ```
+- 使用标准库operator下methodcaller函数调用 
+  实际情况感觉没用 
+
+###  多线程和多进程
+
+#### 38.  如何使用多线程？
+Threading
+- TODO 自己总结 
+
+####  39. 如何线程间通信？ 
+ 由于全局解释锁GIL的存在，多线程进行CPU密集型操作并不能提高执行效率 
+- 使用多个DownloadThread线程进行下载(I/O操作) 
+- 使用一个ConvertThread线程进行转换（CPU密集型操作） 
+-  使用标准库的Queue.Queue，它是一个线程安全的队列，Download线程把下载数据放入队列，Convert线程从队列里提取数据 
+TODO：线程与异步aiohttp 
+
+####  40. 如何在线程间进行时间通知？
+线程间的事件通知，可以使用标准库中Threading.Event 
+等待事件一端调用wait,等待事件 
+通知事件一端调用set ,通知事件  
+TODO
+
+#### 41.  如何使用线程本地数据 
+threading.local函数可以创建本地数据空间，其下属性对每个线程独立存在  
+TODO
+
+
+#### 42. 如何使用线程池？
+对请求连接数做限制，使用线程池，替代原来的每次请求创建线程 
+TODO 
+
+#### 43.如何使用多进程？ 
+- 由于Python中全局解释器锁GIL的存在，在任意时刻只允许一个线程在解释器中运行。因此Python的多线程不适合处理cpu密集型的任务.
+想要处理cpu密集型的任务，可以使用多进程模型 
+- 使用标准库的multiprocessing.Process，它可以启动子进程执行任务，操作接口，进程间通信，进程间同步等都与Threading.Thread类似 
+- 通过Queue和pipe进行进程间的通信 
+
+### 装饰器 
+
+#### 44.如何使用函数装饰器？
+定义装饰器函数，用它来生成一个原函数添加了新功能的函数，替代原函数 
+  ```
+  def memo(func):
+    cache = {}
+
+    def wrap(*args):
+        if args not in cache:
+            cache[args] = func(*args)
+        return cache[args]
+
+    return wrap
+
+
+@memo
+def fibonacci(n):
+    if n <= 1:
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+print(fibonacci(50))
+
+  ```
+
+
+####  45. 如何为被装饰的函数保存元数据 
+在函数对象中保存着一些函数的元数据，使用装饰器后，属性访问后看到是内部包裹的元数据，原来函数的元数据丢失 
+- 使用标准库functools中的装饰器wraps装饰内部包裹函数，可以定制将原函数的某些属性，更新到包裹函数上去 
+@wraps(func)
+
+#### 46. 如何定义带参数的装饰器  
+实现一个装饰器，用来检查被装饰函数的参数类型，装饰器可以通过参数指明函数参数的类型，调用时如果检测出类型不匹配则抛出异常。 
+- 生产装饰器的工厂，inspect.signature()方法，每次调用typeassert，返回一个特定的装饰器，然后去用它修饰其他函数 
+TODO
+
+#### 47. 如何实现属性可修改的函数装饰器 
+为包裹函数增添一个函数，用来修改闭包中使用的自由变量 
+使用弄nonlocal访问嵌套作用域中的变量引用 
+```
+def warn(timeout):
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            start = time.time()
+            res = func(*args, **kwargs)
+            used = time.time() - start
+            if used > timeout:
+                msg = f"{func.__name__}:{used}> {timeout}"
+                logging.warn(msg)
+            return res
+
+        def setTimeout(k):
+            nonlocal timeout
+            timeout = k
+        wrapper.setTimeout = setTimeout
+        return wrapper
+    return decorator
+```
 
 
 
