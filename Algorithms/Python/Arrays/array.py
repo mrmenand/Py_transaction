@@ -1,5 +1,4 @@
 from random import randint
-
 class Array:
     def __init__(self, arr=None, capacity=10):
         if isinstance(arr, list):
@@ -109,8 +108,7 @@ class Array:
         self._data[i], self._data[j] = self._data[j], self._data[i]
 
     def __str__(self):
-        return str(
-            f"Array : {self._data[:self._size]}  ,capacity:{self.get_capacity()}")
+        return str(f"Arrays : {self._data[:self._size]}  ,capacity:{self.get_capacity()}")
 
 
 
