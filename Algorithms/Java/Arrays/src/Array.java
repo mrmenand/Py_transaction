@@ -44,10 +44,19 @@ public class Array<E> {
 		add(0, e);
 	}
 
-	public E get(   int index) {
+	public E get(int index) {
 		if (index < 0 || index >= size)
 			throw new IllegalArgumentException("Get failed. Index is illegal.");
 		return data[index];
+	}
+
+	public E getLast(){
+		return get(size -1);
+	}
+
+	public E getFirst(){
+		return get(0);
+
 	}
 
 	public void set(int index, E e) {
@@ -113,6 +122,35 @@ public class Array<E> {
 		for (int i = 0; i < size; i++)
 			newData[i] = data[i];
 		data = newData;
+	}
+
+
+	public static void main(String[] args) {
+
+		Array<Integer> arr = new Array<>();
+		for(int i = 0 ; i < 10 ; i ++)
+			arr.append(i);
+		System.out.println(arr);
+
+		arr.add(1, 100);
+		System.out.println(arr);
+
+		arr.addFirst(-1);
+		System.out.println(arr);
+
+		arr.remove(2);
+		System.out.println(arr);
+
+		arr.removeElement(4);
+		System.out.println(arr);
+
+		arr.removeFirst();
+		System.out.println(arr);
+
+		for(int i = 0 ; i < 4 ; i ++){
+			arr.removeFirst();
+			System.out.println(arr);
+		}
 	}
 
 }
