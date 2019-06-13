@@ -46,7 +46,7 @@ class ArrayStack(Stack):
 
     def get_capacity(self):
         return self._array.get_capacity()
-
+    #
     def __str__(self):
         return str(f"ArrayStack : {self._array}")
 
