@@ -4,7 +4,7 @@
 >人生苦短，何不用Py交易一波
 
 本库主要是从小白学习Python的记录
-* [Algorithm](./Algorithm)
+* [Algorithm](./Algorithms)
 * [CCF_CSP](./CCF_CSP) 
 * [Cpapa](./CPaPa)
 * [LeetCode](./LeetCode)
