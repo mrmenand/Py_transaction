@@ -1,6 +1,6 @@
-.idea
+*.idea
 
 
-.xml
-.iml
+*.xml
+*.iml
 __pycache__
