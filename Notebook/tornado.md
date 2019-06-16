@@ -1,6 +1,7 @@
 ###Acknowledgements
 [Tornado官方文档](https://tornado-zh.readthedocs.io/zh/latest/index.html) 
 [感觉是对并发并行同步异步多线程讲的最好的一篇文章](https://www.jianshu.com/p/508360433901)  
+[Introduction to Tornado](http://demo.pythoner.com/itt2zh/index.html)  
 
 ### 
 并发concurrent：任一时刻只有一个程序在处理机上运行 
