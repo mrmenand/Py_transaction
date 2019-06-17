@@ -6,7 +6,6 @@
 本库主要是从小白学习Python的记录
 * [Algorithm](./Algorithms)
 * [CCF_CSP](./CCF_CSP) 
-* [Cpapa](./CPaPa)
 * [LeetCode](./LeetCode)
 * [Notebook](./Notebook) 
    - [Python高级编程技巧](./Notebook/program_skills.md)
