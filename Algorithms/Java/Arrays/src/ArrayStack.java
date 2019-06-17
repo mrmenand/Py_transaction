@@ -59,6 +59,6 @@ public class ArrayStack<E> implements Stack<E> {
 			System.out.println(stack);
 		}
 		stack.pop();
-		System.out.println();
+		System.out.println(stack);
 	}
 }
