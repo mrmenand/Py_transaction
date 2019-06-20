@@ -11,6 +11,14 @@ public class Array<E> {
 		this(10);
 	}
 
+	public Array(E[] arr) {
+		data = (E[]) new Object[arr.length];
+		for(int i= 0 ;i < arr.length ; i ++)
+			data[i] = arr[i] ;
+		size = arr.length ;
+
+	}
+
 	public int getCapacity() {
 		return data.length;
 	}
@@ -50,11 +58,11 @@ public class Array<E> {
 		return data[index];
 	}
 
-	public E getLast(){
-		return get(size -1);
+	public E getLast() {
+		return get(size - 1);
 	}
 
-	public E getFirst(){
+	public E getFirst() {
 		return get(0);
 
 	}
@@ -102,6 +110,16 @@ public class Array<E> {
 			remove(index);
 	}
 
+	public void swap(int i, int j) {
+		if (i < 0 || i >= size || j < 0 || j >= size)
+			throw new IllegalArgumentException("Index is illegal");
+
+		E t = data[i];
+		data[i] = data[j];
+		data[j] = t;
+
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder res = new StringBuilder();
@@ -128,7 +146,7 @@ public class Array<E> {
 	public static void main(String[] args) {
 
 		Array<Integer> arr = new Array<>();
-		for(int i = 0 ; i < 10 ; i ++)
+		for (int i = 0; i < 10; i++)
 			arr.append(i);
 		System.out.println(arr);
 
@@ -147,7 +165,7 @@ public class Array<E> {
 		arr.removeFirst();
 		System.out.println(arr);
 
-		for(int i = 0 ; i < 4 ; i ++){
+		for (int i = 0; i < 4; i++) {
 			arr.removeFirst();
 			System.out.println(arr);
 		}
