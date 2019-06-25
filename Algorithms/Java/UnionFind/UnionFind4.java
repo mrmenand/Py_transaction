@@ -47,7 +47,7 @@ public class UnionFind4 implements UF {
 			parent[qRoot] = pRoot ;
 		}
 		else {
-			parent[qRoot]  = qRoot;
+			parent[qRoot]  = pRoot;
 			rank[pRoot] += 1;
 
 		}
