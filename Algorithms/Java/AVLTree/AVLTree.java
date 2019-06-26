@@ -21,6 +21,11 @@ public class AVLTree <K extends Comparable<K>,V> {
 	private Node root;
 	private int size;
 
+	public AVLTree(){
+		root = null;
+		size = 0;
+	}
+
 	public int getSize() {
 		return size;
 	}
@@ -76,6 +81,9 @@ public class AVLTree <K extends Comparable<K>,V> {
 	private Node  rightRotate(Node y ){
 		Node x  = y.left ;
 		Node T3 = x.right ;
+
+		x.right = y ;
+		y.left  = T3 ;
 
 		y.height = Math.max(getHeight(y.left),getHeight(y.right)) + 1 ;
 		x.height = Math.max(getHeight(x.left),getHeight(x.right)) + 1 ;
@@ -276,8 +284,6 @@ public class AVLTree <K extends Comparable<K>,V> {
 	public boolean contains(K key) {
 		return getNode(root, key) != null;
 	}
-
-
-
+	
 
 }

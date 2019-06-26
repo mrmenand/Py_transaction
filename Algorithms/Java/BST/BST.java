@@ -204,7 +204,7 @@ public class BST<E extends Comparable<E>> {
 	private Node remove(Node node, E e) {
 		if (node == null)
 			return null ;
-		if (e.compareTo(node.e) < 0 ){
+		else if (e.compareTo(node.e) < 0 ){
 			node.left = remove(node.left,e);
 			return node ;
 		}

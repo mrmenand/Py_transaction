@@ -108,10 +108,10 @@ class BSTMap(Map):
             return node
         return self._mininum(node.left)
 
-    # def mininum(self):
-    #     if self.isEmpty():
-    #         raise ValueError("Empty is empty")
-    #     self._mininum(self._root)
+    def mininum(self):
+        if self.isEmpty():
+            raise ValueError("Empty is empty")
+        self._mininum(self._root)
 
     def _removeMin(self, node):
 
