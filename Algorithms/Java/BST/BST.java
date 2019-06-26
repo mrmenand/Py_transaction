@@ -213,6 +213,7 @@ public class BST<E extends Comparable<E>> {
 			return node ;
 		}
 		else {
+
 			if (node.left == null){
 				Node rightNode = node.right ;
 				node.right = null ;
