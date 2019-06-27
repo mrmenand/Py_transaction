@@ -90,7 +90,7 @@ public class RBTree  <K extends Comparable<K>,V> {
 			node.value = value;
 
 		if (isRed(node.right) && !isRed(node.left))
-			node = leftRotate(node)
+			node = leftRotate(node);
 
 		if (isRed(node.left) && isRed(node.left.left))
 			node = rightRotate(node) ;
