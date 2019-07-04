@@ -45,3 +45,7 @@ SQL LIKE 子句中使用百分号 %字符来表示任意字符
 #### union
 select catagloryName from table_cataglory union elect catagloryName from tb_cataglory order by catagloryName;
 UNION 操作符用于连接两个以上的 SELECT 语句的结果组合到一个结果集合中。多个 SELECT 语句会删除重复的数据
+
+
+### MGONDB
+### REDIS
