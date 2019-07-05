@@ -18,7 +18,8 @@
   - Cassandra hadoop
 - 事务”特性的支持：sql对事务的支持非常完善，而nosql基本不支持事务
 
-### MGONDB
+### MongoDB 
+- MongoDB 是一个面向文档存储的数据库 
 
 ### REDIS
 Redis 是一个高性能的key-value数据库 
