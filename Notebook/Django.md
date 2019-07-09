@@ -78,3 +78,29 @@ Django框架遵循MVC设计，并且有一个专有名词：MVT
   - 元选项 
   在模型类中定义类Meta，用于设置元信息，如使用db_table自定义表的名字。 
   `   class Meta:db_table='bookinfo' #指定BookInfo生成的数据表名为bookinfo`
+
+
+####  视图 
+- URFconf  
+- 视图 
+- HttpRequest对象 
+- HttpResponse对象 
+- 状态保持 
+
+
+#### 模板  
+
+- 模板语言 
+- 模板继承 
+- HTML转义  
+- CSRF  
+- 验证码  
+- 反向解析  
+
+#### 常用 
+
+- 静态文件的处理 
+- 中间件 
+- Admin站点 
+- 上传图片 
+- 分页 
