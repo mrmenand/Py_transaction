@@ -50,3 +50,6 @@
   if ret: ret.insert(0,i)
   ret.append(i) 
  ```
+
+8.8 
+最近状态不太行，今天开始继续刷题

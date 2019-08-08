@@ -1,19 +1,29 @@
 # 216. 组合总和 III
-
-def combinationSum3(k: int, n: int) :
-    def comb(k: int, n: int, start: int) -> list:  # 从start考虑，可以避免重复
-        if k == 1:  # 终止条件
-            if n < 10:
-                return [[n]]
-            return []
-        res = [] 
-        for i in range(start + 1, min((n + 1) // 2, 10)):  # 当前数最多取到n的一半，避免重复，且得满足i<10
-            for j in comb(k - 1, n - i, i):  # 回溯
-                res.append([i] + j)
-        return res
-
-    return comb(k, n, 0)
+from itertools import combinations
 
 
+class Solution:
+    def combinationSum3(self, k: int, n: int):
+        def traceback(k: int, n: int, start: int):
+            if k == 1:
+                if n < 10:
+                    return [[n]]
+                return []
+
+            ret = []
+            for i in range(start + 1, min((n + 1) // 2, 10)):
+                for j in traceback(k - 1, n - i, i):
+                    ret.append([i] + j)
+            return ret
+
+        return traceback(k, n, 0)
 
 
+# class Solution:
+#     def combinationSum3(self, k: int, n: int):
+#         nums = [i for i in range(1,10)]
+#         return [i for i in combinations(nums,k) if sum(i) == n]
+
+a = Solution()
+b = a.combinationSum3(3,7)
+print(b)
