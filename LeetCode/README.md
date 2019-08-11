@@ -70,4 +70,7 @@
    - 先转置后反转 
    - 旋转两个矩形  
    
-  
+8.11 
+* 106 从中序与后序遍历序列构造二叉树 
+   - 左根右 inorder[:idx],postorder[:idx]
+   - 左右根 inorder[idx+1:],postorder[idx:]
