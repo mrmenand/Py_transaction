@@ -73,4 +73,9 @@
 8.11 
 * 106 从中序与后序遍历序列构造二叉树 
    - 左根右 inorder[:idx],postorder[:idx]
-   - 左右根 inorder[idx+1:],postorder[idx:]
+   - 左右根 inorder[idx+1:],postorder[idx:] 
+   
+* 238 除自身以外数组的乘积
+  - O(n)，左边乘积*右边乘积 
+  - 上下三角形，对角线为1 
+ 
