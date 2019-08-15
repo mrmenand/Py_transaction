@@ -39,7 +39,7 @@ class Solution:
 #         self.l.append(root.val)
 #         self.findSecondMinimumValue(root.left)
 #         self.findSecondMinimumValue(root.right)
-#         self.l.sort()
+#         self.l.sort&search()
 #         base=self.l[0]
 #         for i in self.l[1:]:
 #             if i!=base:

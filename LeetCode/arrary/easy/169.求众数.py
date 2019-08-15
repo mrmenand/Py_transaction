@@ -18,6 +18,6 @@ print(test.majorityElement(nums=[2,2,1,1,1,2,2]))
 #         :type nums: List[int]
 #         :rtype: int
 #         """
-#         nums.sort()
+#         nums.sort&search()
 #         n = int(len(nums)/2)
 #         return nums[n]

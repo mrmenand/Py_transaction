@@ -19,7 +19,7 @@ print(test.arrayPairSum(nums))
 #         :type nums: List[int]
 #         :rtype: int
 #         """
-#         nums.sort()
+#         nums.sort&search()
 #         sum=0
 #         for i in nums[::2]:
 #             sum=sum+i
