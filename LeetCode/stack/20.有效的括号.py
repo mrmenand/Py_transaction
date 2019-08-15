@@ -1,17 +1,16 @@
 # 20. 有效的括号
 class Solution:
-    def isValid(self,s):
-         # s: str) -> bool:
-         d = {')':'(', '}':'{', ']':'['}
-         stack = []
-         for c in s:
-             if c not in d:
-                 stack.append(c)
-             elif not stack or d[c] != stack.pop():
-                 return False
+    def isValid(self, s):
+        # s: str) -> bool:
+        d = {')': '(', '}': '{', ']': '['}
+        stack = []
+        for c in s:
+            if c not in d:
+                stack.append(c)
+            elif not stack or d[c] != stack.pop():
+                return False
 
-         return not stack
-
+        return not stack
 
 # class Solution(object):
 # #     def isValid(self, s):
@@ -34,8 +33,3 @@ class Solution:
 # #                 if lb[top] != x:
 # #                     return False
 # #         return len(stack) == 0
-
-
-
-
-

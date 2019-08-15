@@ -13,16 +13,4 @@ nums = [1,4,3,2]
 test = Solution()
 print(test.arrayPairSum(nums))
 
-# class Solution:
-#     def arrayPairSum(self, nums):
-#         """
-#         :type nums: List[int]
-#         :rtype: int
-#         """
-#         nums.sort&search()
-#         sum=0
-#         for i in nums[::2]:
-#             sum=sum+i
-#         return sum
-
 
