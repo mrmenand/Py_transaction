@@ -187,12 +187,37 @@ keys:状态转移方程
   - 经典动态规划  
   
 ### TraceBack 
+
+Key:排列组合以及子集的问题 
+[LeetCode回溯总结](https://leetcode-cn.com/problems/permutations/solution/hui-su-suan-fa-by-powcai-2/)
+
 - 200 岛屿问题 
    - DFS回溯
    - BFS 
    - [并查集（合并相同的）](https://leetcode-cn.com/problems/number-of-islands/solution/dfs-bfs-bing-cha-ji-python-dai-ma-java-dai-ma-by-l/)
   
 
+- 17 电话号码的字母组合 
+   -  列表生成式遍历所有所有结果
+   
+- 22  括号生成
+   - 回溯，先遍历添加左括号后添加右括号 
+   
+- 46 全排列 
+   -  回溯 
+
+- 78 子集 
+   * 78 子集  
+   - 组合：` [list(tmp)  for i in range(len(nums)+1) for tmp in itertools.combinations(nums,i)] `  
+   - 位掩码： [回溯+位源码题解](https://leetcode-cn.com/problems/subsets/solution/hui-su-python-dai-ma-by-liweiwei1419/) 
+   - 迭代 
+   - 回溯 
+   
+   
+- 79 单词搜索  
+   - 与200 岛屿数量回溯算法是一样的解法  
+ 
+   
 ### Design  
 
 - 384 打乱数组  
