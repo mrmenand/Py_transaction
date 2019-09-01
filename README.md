@@ -16,7 +16,8 @@
    - [Python设计模式](./Notebook/designpattern.md) 
    - [Python与三大主流数据库](./Notebook/database.md)
    - [Django和Flsak](./Notebook/Django.md)
-   - [Tornado轻量级框架](./Notebook/tornado.md) 
+   - [Tornado轻量级框架](./Notebook/tornado.md)
+   - [安装笔记](/Notebook/安装笔记.md)
 
 ~~以上笔记正在缓慢更新中的~~
 
