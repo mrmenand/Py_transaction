@@ -14,9 +14,10 @@ class Solution:
 
 
 matrix = [
-  [1,2,3],
-  [4,5,6],
-  [7,8,9]
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
 ]
 a = Solution()
-b = a.rotate(matrix)
+a.rotate(matrix)
+print(matrix)
