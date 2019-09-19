@@ -1,14 +1,13 @@
 # 122. 买卖股票的最佳时机 II
 class Solution:
     def maxProfit(self, price):
-                  # prices: List[int]) -> int:
-            result = 0
-            for i in range(1,len(price)):
-                if price[i]-price[i-1]>0:
-                    result +=price[i]-price[i-1]
+        # prices: List[int]) -> int:
+        result = 0
+        for i in range(1, len(price)):
+            if price[i] - price[i - 1] > 0:
+                result += price[i] - price[i - 1]
 
-            return result
-
+        return result
 
 # class Solution:
 #     def maxProfit(self, prices):
