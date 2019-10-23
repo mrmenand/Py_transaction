@@ -17,4 +17,11 @@
 wait（）wait(timeout=None) 等待通过栅栏，返回0到线程数-1的整数(barrier_id)，每个线程返回不同。如果wait方法设置了超时，并超时发送，栅栏将处于broken状态。
 broken() 检测栅栏是否处于打破的状态，返回True或False
 abort()  将栅栏置于broken状态，等待中的线程或者调用等待方法的线程都会抛出threading.BrokenBarrieError异常，直到reset方法来恢复栅栏
-reset()   恢复栅栏，重新开始拦截
+reset()   恢复栅栏，重新开始拦截  
+
+* 1114 按序打印  
+   -  通过阻塞，等待任务 
+   -  [循环/阻塞*5/队列*2/字典的九种解法](https://leetcode-cn.com/problems/print-in-order/solution/1114-an-xu-da-yin-python3de-5chong-jie-fa-by-tuotu/) 
+
+* 1115 交替打印FooBar
+   - 与1114题目类似，都是通过阻塞，实现异步
