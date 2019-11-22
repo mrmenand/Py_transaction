@@ -290,3 +290,8 @@
 * 279 完全平方数  
    - BFS 
    - 动态规划(超时) status transfer : `dp[i] = min(dp[i],dp[i-j*j]+1)`  
+
+11.22 
+* 304 二维区域和检索 
+     - ST:`sumRegion(row1, col1, row2, col2) = dp[row2][col2] - dp[row2][col1 - 1] - dp[row1 - 1][col2] + dp[row1 - 1][col1 - 1]`
+
