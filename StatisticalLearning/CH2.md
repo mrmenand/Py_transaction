@@ -2,8 +2,8 @@
 感知机（perceptron）是线性二分类模型
 
 #### 模型 
-输入（特征）空间 ： $\mathcal X \sube R^n $ 
-输出空间 ：$\mathcal Y={+1,-1}$ 
+输入（特征）空间 ： $\mathcal X \in R^n $ 
+输出空间 ：$\mathcal Y=\{+1,-1\}$ 
 决策函数(判别模型) ：$f(x)=sign (w\cdot x+b)$ 
 
 #### 策略 
