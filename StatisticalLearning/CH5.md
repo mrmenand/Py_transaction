@@ -25,7 +25,7 @@ H_A(D)=-\sum_{i=1}^n\frac{D_i}{D}log_2\frac{D_i}{D}$$
 
 #### 样本集合D的基尼指数（CART） 
 $$
-Gini(p) =1-\sum_{k=1}^K(\frac{{|C_k|}}{|D|})^2 
+Gini(D) =1-\sum_{k=1}^K(\frac{{|C_k|}}{|D|})^2 
 $$
 特征A集合下D的基尼指数：
 $$Gini(D,A)=\frac {|D_1|}{|D|}Gini(D1) + \frac {|D_2|}{|D|}Gini(D2)$$
@@ -46,7 +46,7 @@ $$Gini(D,A)=\frac {|D_1|}{|D|}Gini(D1) + \frac {|D_2|}{|D|}Gini(D2)$$
 > 
 > 1. 递归地从树的叶节点向上回溯。
 $$C_\alpha(T)=C(T)+\alpha|T|$$
-> 假设一组叶结点回缩到其父结点之前与之后的整体树分别是$T_B$和$T_A$，其对应的损失函数分别是$C_\alpha(T_A)$和$C_\alpha(T_B)$，如果$C_\alpha(T_A)\leqslant C_\alpha(T_B)$则进行剪枝，即将父结点变为新的叶结点 
+> 假设一组叶结点回缩到其父结点之前与之后的整体树分别是$T_B$和$T_A$，其对应的损失函数分别是$C_\alpha(T_A)$和$C_\alpha(T_B)$，如果$C_\alpha(T_A)\leq C_\alpha(T_B)$则进行剪枝，即将父结点变为新的叶结点 
 >
 > 1. 返回2，直至不能继续为止，得到损失函数最小的子树$T_\alpha$ 
 
@@ -63,9 +63,9 @@ $$C_\alpha(T)=C(T)+\alpha|T|$$
 > 
 > 输出：回归树$f(x)$ 
 > 
-> 1. 遍历变量$j$，对固定的切分变量$j$扫描切分点$s$，得到满足上面关系的$(j,s)$
-   $$
-   \min\limits_{j,s}\left[\min\limits_{c_1}\sum\limits_{x_i\in R_1(j,s)}(y_i-c_1)^2+\min\limits_{c_2}\sum\limits_{x_i\in R_2(j,s)}(y_i-c_2)^2\right]
+> 1. 遍历变量$j$，对固定的切分变量$j$扫描切分点$s$，得到满足上面关系的$(j,s)$ 
+> $$ 
+\min\limits_{j,s}\left[\min\limits_{c_1}\sum\limits_{x_i\in R_1(j,s)}(y_i-c_1)^2+\min\limits_{c_2}\sum\limits_{x_i\in R_2(j,s)}(y_i-c_2)^2\right]
    $$
 > 1. 用选定的$(j,s)$, 划分区域并决定相应的输出值
    $$
@@ -76,6 +76,12 @@ $$C_\alpha(T)=C(T)+\alpha|T|$$
 > 1. 将输入空间划分为$M$个区域$R_1, R_2,\dots,R_M$，生成决策树：
    $$
    f(x)=\sum_{m=1}^M\hat{c}_mI(x\in R_m)
-   $$
+   $$ 
 
+#### 分类树的生成 
+如果样本集合$D$根据特征$A$是否取某一可能值$\alpha$被分割成$D1$和$D2$两部分，即
+$$D_1= \{（x，y） \in D |A(x)=a\}, D2=D-D1$$
+特征A集合下D的基尼指数：
+$$Gini(D,A)=\frac {|D_1|}{|D|}Gini(D1) + \frac {|D_2|}{|D|}Gini(D2)$$
 
+基尼指数$Gini(D)$表示集合$D$的不确定性，$Gini(D，A)$表示$A=a$f分割后集合$D$的不确定性。
