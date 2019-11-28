@@ -68,7 +68,7 @@ $$C_\alpha(T)=C(T)+\alpha|T|$$
 \min\limits_{j,s}\left[\min\limits_{c_1}\sum\limits_{x_i\in R_1(j,s)}(y_i-c_1)^2+\min\limits_{c_2}\sum\limits_{x_i\in R_2(j,s)}(y_i-c_2)^2\right]
    $$
 > 1. 用选定的$(j,s)$, 划分区域并决定相应的输出值
-   $$
+> $$
    R_1(j,s)=\{x|x^{(j)}\leq s\}, R_2(j,s)=\{x|x^{(j)}> s\} \\
    \hat{c}_m= \frac{1}{N}\sum\limits_{x_i\in R_m(j,s)} y_j, x\in R_m, m=1,2
    $$
@@ -84,4 +84,4 @@ $$D_1= \{（x，y） \in D |A(x)=a\}, D2=D-D1$$
 特征A集合下D的基尼指数：
 $$Gini(D,A)=\frac {|D_1|}{|D|}Gini(D1) + \frac {|D_2|}{|D|}Gini(D2)$$
 
-基尼指数$Gini(D)$表示集合$D$的不确定性，$Gini(D，A)$表示$A=a$f分割后集合$D$的不确定性。
+基尼指数$Gini(D)$表示集合$D$的不确定性，$Gini(D，A)$表示$A=a$分割后集合$D$的不确定性。
