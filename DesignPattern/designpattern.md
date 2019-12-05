@@ -17,5 +17,8 @@
 * 迪米特法则 DP(Demeter Principle) 又称不知道原则：功能模块尽量独立
 * 合成复用原则（Composite Reuse Principle）尽量使用聚合，组合，而不是继承 
 
+ 
+
+
 
 
