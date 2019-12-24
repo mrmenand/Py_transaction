@@ -1,11 +1,27 @@
-## Design Patterns  
+# Design Patterns  
 
-### Acknowledge 
+## Acknowledge 
 - 《人人都懂设计模式：从生活中领悟设计模式：Python实现》 
 
-### Preliminary 
+## Preliminary 
 
-#### UML 
+### 设计原则 
+
+#### SOLID原则 
+SOLID是面向对象设计（OOD）的五大基本原则的首字母缩写组合。
+这
+五大原则分别是：S—单一职责原则，O—开放封闭原则，L—里氏替换原则，I—接口隔离原则，D—依赖倒置原则  
+
+| 原则 | 核心思想 |实例| 优点 | 缺点 | 
+|:-:|:-:|:-:|:-:|:-:|
+| 单一职责原则（Single Responsibility Principle，SRP）  | 一个类应该有且仅有一个原因引起它的变更|人吃饭，狗恰狗粮 |1.功能单一,职责清晰<br>2.增强可读性，方便维护 | 1.拆分得太详细,类的数量会急剧增加<br>2.职责的度量没有统一的标准，需要根据项目实现情况而定。| 
+|开放封闭原(Open Close Principle,OCP) |软件实体（如类、模块、函数等应该对拓展开放，对修改封闭 |动物元类，继承的子类有不同的方法实现，天上飞、地上跑和海里游|   
+|里氏替换原则（LiskovSubstitution Principle，LSP| 所有能引用基类的地方必须能透明地使用其子类的对象（父类出现的地方可以用子类来替换它，反之子类能出现的地方，父类不一定能出现）| 程序猿类继承陆地动物的方法，新增方法了攒天猴方法 | 
+| 接口隔离原则（Interface Segregation Principle，ISP| 客户端不应该依赖它不需要的接口。（建立单一接口，不要建立庞大臃肿的接口，尽量细化接口，接口中的方法尽量少） 
+|依赖倒置原则（Dependence Inversion Principle，DIP） |高层模块不应该依赖低层模块，二者都该依赖其抽象。抽象不应该依赖细节，细节应该依赖抽象 | 动物元类抽象不依赖于细节（具体的食物类），具体的动物类（Dog）也不依赖于细节，只依赖抽象编程| 
+
+
+### UML 
 UML（Unified Modeling Language）统一建模语
 言，一种由一整套图组成的标准化建模语言，用于帮助系统开发人员阐明、设计和构建软件系统。 
 
@@ -22,7 +38,7 @@ UML（Unified Modeling Language）统一建模语
 
 ![uml_cls](./others/uml_cls.png)
 
-### 观察者模式（Observer） 
+## 观察者模式（Observer） 
 在**对象**间(主题Subject)定义一种一对多的**依赖**关系（观察者列表Observer）,被观察者对象在状态或内容（数据）发生变化时，所有依赖它的对象都会被通知并自动更新。 
 
 观察者模式是对象的行为模式，又叫发布/订阅（Publish/Subscribe）模式、模型/视图（Model/View）模式、源/监听器（Source/Listener）模式或从属者（Dependents）模式。  
@@ -40,7 +56,7 @@ UML（Unified Modeling Language）统一建模语
 [相关代码实现:热水器以及异常登陆机制](./pattern/observer.py)  
 
 `
-### 状态模式（State）
+## 状态模式（State）
 - 决定状态变化的因素也非常多，我们可以把决定状态变化的属性单独抽象成一个类StateInfo，这样判断状态属性是否符合当前的状态isMatch时就可以传入更多的信息.  
 - 每一种状态应当只有唯一的实例. 
 
